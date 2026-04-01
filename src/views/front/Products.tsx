@@ -75,7 +75,6 @@ const Products = () => {
     // modal初始化
     if (productModalRef.current) {
       productModal.current = new bootstrap.Modal(productModalRef.current);
-      console.log(productModal.current);
     }
 
     // modal 關閉時移除焦點
