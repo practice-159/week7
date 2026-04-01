@@ -28,7 +28,7 @@ const SingleProduct = () => {
       }
     };
     handleView(id);
-  }, [showError, id]);
+  }, []);
 
   const addCart = async (id: string, num: number = 1) => {
     const data = {

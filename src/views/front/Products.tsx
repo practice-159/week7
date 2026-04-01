@@ -57,11 +57,6 @@ const Products = () => {
     }
   };
 
-  // 關閉 modal
-  const closeModal = () => {
-    productModal.current?.hide();
-  };
-
   useEffect(() => {
     // 刷新產品列表
     const getProducts = async () => {
@@ -80,6 +75,7 @@ const Products = () => {
     // modal初始化
     if (productModalRef.current) {
       productModal.current = new bootstrap.Modal(productModalRef.current);
+      console.log(productModal.current);
     }
 
     // modal 關閉時移除焦點
@@ -89,8 +85,12 @@ const Products = () => {
         document.activeElement.blur();
       }
     });
-  }, [showError]);
+  }, []);
 
+  // 關閉 modal
+  const closeModal = () => {
+    productModal.current?.hide();
+  };
   return (
     <>
       <table className="table align-middle">

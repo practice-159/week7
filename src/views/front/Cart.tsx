@@ -92,7 +92,7 @@ const Cart = () => {
     (async () => {
       await getCart();
     })();
-  }, [getCart]);
+  }, []);
 
   return (
     <div>
